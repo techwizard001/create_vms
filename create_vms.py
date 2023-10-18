@@ -79,5 +79,7 @@ response_vm3 = ec2.run_instances(
 )
 
 # Print instance IDs, private IPs, and subnets
-print(f"Instance ID is {response_vm2['Instances'][0]['InstanceId']} with Private IP {response_vm2['Instances'][0]['PrivateIpAddress']} In the Subnet {subnet_id_vm2} with CIDR <subnet-cidr-vm2>")
-print(f"Instance ID is {response_vm3['Instances'][0]['InstanceId']} with Private IP {response_vm3['Instances'][0]['PrivateIpAddress']} In the Subnet {subnet_id_vm3} with CIDR <subnet-cidr-vm3>")
+print(
+    f"VM2 Instance ID is {response_vm2['Instances'][0]['InstanceId']} with Private IP {response_vm2['Instances'][0]['PrivateIpAddress']} In the Subnet {subnet_id_vm2} with CIDR 172.31.32.0/20")
+print(
+    f"VM3 Instance ID is {response_vm3['Instances'][0]['InstanceId']} with Private IP {response_vm3['Instances'][0]['PrivateIpAddress']} In the Subnet {subnet_id_vm3} with CIDR 172.31.16.0/20")
